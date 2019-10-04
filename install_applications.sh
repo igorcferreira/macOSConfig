@@ -52,3 +52,4 @@ function install_app_zip {
 install_app_pkg 1Password "https://app-updates.agilebits.com/download/OPM7" "/"
 install_app_dmg Sublime\ Text "https://download.sublimetext.com/Sublime%20Text%20Build%203211.dmg" "Sublime Text"
 install_app_zip Visual\ Studio\ Code "https://go.microsoft.com/fwlink/?LinkID=620882"
+install_app_dmg Android\ Studio "https://dl.google.com/dl/android/studio/install/3.5.1.0/android-studio-ide-191.5900203-mac.dmg" "Android Studio 3.5.1"
