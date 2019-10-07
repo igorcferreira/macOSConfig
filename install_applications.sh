@@ -54,3 +54,4 @@ install_app_dmg Sublime\ Text "https://download.sublimetext.com/Sublime%20Text%2
 install_app_zip Visual\ Studio\ Code "https://go.microsoft.com/fwlink/?LinkID=620882"
 install_app_dmg Android\ Studio "https://dl.google.com/dl/android/studio/install/3.5.1.0/android-studio-ide-191.5900203-mac.dmg" "Android Studio 3.5.1"
 install_app_dmg Intellij\ IDEA\ CE "https://download.jetbrains.com/idea/ideaIC-2019.2.3.dmg?_ga=2.127015117.1319076227.1570440292-146022599.1570440292" "Intellij IDEA CE"
+install_app_zip iTerm "https://iterm2.com/downloads/stable/iTerm2-3_3_5.zip"
