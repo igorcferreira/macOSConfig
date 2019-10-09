@@ -21,7 +21,7 @@ if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load simple profile
-[[ -s "$HOME/.profile" ]] && source "$HOME/.bash_functions" # Loads a set of functions that can be useful
+[[ -s "$HOME/.bash_functions" ]] && source "$HOME/.bash_functions" # Loads a set of functions that can be useful
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
