@@ -19,6 +19,7 @@ set -e
 execute_remote_script install_homebrew
 execute_remote_script install_oh_my_zsh
 execute_remote_script install_rvm
+execute_remote_script install_java
 execute_remote_script install_android
 
 sudo -- sh -c "$(curl -fsSL $SCRIPT_REPO/install_dot_files.sh)"
