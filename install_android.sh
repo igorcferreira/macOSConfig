@@ -22,7 +22,12 @@ fi
 if [ -f "$HOME/.android/repositories.cfg" ]; then
 	echo "Config file already in place"
 else
-	touch "$HOME/.android/repositories.cfg"
+	if [[ -f "$HOME/.android/repositories.cfg" ]]; then
+		if [[ ! -d "$HOME/.android" ]]; then
+			mkdir "$HOME/.android"
+		fi
+		touch "$HOME/.android/repositories.cfg"
+	fi
 fi
 
 yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
