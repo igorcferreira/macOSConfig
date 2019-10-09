@@ -49,9 +49,28 @@ function install_app_zip {
 	rm -rf "$(pwd)/$APP_NAME.zip"
 }
 
+function install_app_store {
+	APP_ID="$1"
+
+	mas install "$APP_ID"
+}
+
+function prepare_app_store {
+	if [[ ! -x "$(which mas)" ]]; then
+		brew install mas
+	fi
+	mas signin
+}
+
 install_app_pkg 1Password "https://app-updates.agilebits.com/download/OPM7" "/"
 install_app_dmg Sublime\ Text "https://download.sublimetext.com/Sublime%20Text%20Build%203211.dmg" "Sublime Text"
 install_app_zip Visual\ Studio\ Code "https://go.microsoft.com/fwlink/?LinkID=620882"
 install_app_dmg Android\ Studio "https://dl.google.com/dl/android/studio/install/3.5.1.0/android-studio-ide-191.5900203-mac.dmg" "Android Studio 3.5.1"
 install_app_dmg Intellij\ IDEA\ CE "https://download.jetbrains.com/idea/ideaIC-2019.2.3.dmg?_ga=2.127015117.1319076227.1570440292-146022599.1570440292" "Intellij IDEA CE"
 install_app_zip iTerm "https://iterm2.com/downloads/stable/iTerm2-3_3_5.zip"
+
+prepare_app_store
+install_app_store 1384080005 #Tweetbot
+install_app_store 497799835 #Xcode
+install_app_store 587512244 #Kaleidoscope
+install_app_store 803453959 #Slack
