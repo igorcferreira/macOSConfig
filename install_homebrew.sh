@@ -12,7 +12,16 @@ else
 fi
 
 set +e
-brew bundle || true
+BREWFILE="$TMPDIR/Brewfile"
+
+if [ -f "$BREWFILE" ]; then
+	echo "Removing temp Brewfile"
+	rm "$BREWFILE"
+fi
+
+curl "https://raw.githubusercontent.com/igorcferreira/macOSConfig/master/Brewfile" > "$BREWFILE"
+brew bundle --file=$BREWFILE || true
 set -e
+rm "$BREWFILE"
 
 echo "Installed Homebrew"
