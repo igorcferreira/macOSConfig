@@ -35,4 +35,7 @@ configure_dot_file .bash_profile
 configure_dot_file .zprofile
 configure_dot_file .zshrc
 
+source "$HOME/.zprofile"
+source "$HOME/.zshrc"
+
 echo "Installed dot files"
