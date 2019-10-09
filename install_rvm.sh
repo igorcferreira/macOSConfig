@@ -14,8 +14,5 @@ else
 	source "$HOME/.rvm/scripts/rvm"
 fi
 
-rvm use default
-rvm reload
-
 gem install $(curl -fsSL "https://raw.githubusercontent.com/igorcferreira/macOSConfig/master/Gemlist")
 gem cleanup
