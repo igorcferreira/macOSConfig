@@ -22,8 +22,6 @@ execute_remote_script install_rvm
 execute_remote_script install_java
 execute_remote_script install_android
 
-sudo -- sh -c "$(curl -fsSL $SCRIPT_REPO/install_dot_files.sh)"
-
 execute_remote_script install_applications
 
 echo "Done! Now, don't forget to import your .ssh export, necessary .p12, and GPG keys!"
