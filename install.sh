@@ -17,11 +17,10 @@ sudo xcode-select --install || true
 set -e
 
 execute_remote_script install_homebrew
-execute_remote_script install_oh_my_zsh
 execute_remote_script install_rvm
 execute_remote_script install_java
 execute_remote_script install_android
-
 execute_remote_script install_applications
+execute_remote_script install_oh_my_zsh
 
 echo "Done! Now, don't forget to import your .ssh export, necessary .p12, and GPG keys!"
