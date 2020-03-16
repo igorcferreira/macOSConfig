@@ -1,6 +1,7 @@
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 tap "homebrew/core"
 tap "peripheryapp/periphery"
 tap "signalwire/signalwire"
@@ -22,6 +23,7 @@ brew "openssl@1.1"
 brew "pcre"
 brew "readline"
 brew "sqlite"
+brew "python"
 brew "glib"
 brew "gnupg"
 brew "gradle"
@@ -64,6 +66,7 @@ brew "signalwire/signalwire/signalwire-c"
 cask "adoptopenjdk8"
 cask "android-studio"
 cask "brave-browser"
+cask "db-browser-for-sqlite"
 cask "docker"
 cask "firefox"
 cask "gpg-suite"
@@ -72,9 +75,11 @@ cask "intellij-idea-ce"
 cask "iterm2"
 cask "libreoffice"
 cask "libreoffice-language-pack"
+cask "macdown"
 cask "mockoon"
 cask "periphery"
 cask "sketch"
+cask "sonos"
 cask "visual-studio-code"
 mas "Apple Configurator 2", id: 1037126344
 mas "Cinebench", id: 1438772273
@@ -83,6 +88,7 @@ mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Kaleidoscope", id: 587512244
 mas "Keynote", id: 409183694
+mas "LG Screen Manager", id: 1142051783
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
