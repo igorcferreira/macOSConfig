@@ -9,18 +9,22 @@ tap "microsoft/mssql-release"
 tap "peripheryapp/periphery"
 tap "pivotal/tap"
 tap "signalwire/signalwire"
+tap "teamookla/speedtest"
 brew "appledoc"
 brew "autoconf"
 brew "automake"
+brew "openssl@1.1"
+brew "readline"
+brew "sqlite"
+brew "python@3.9"
+brew "awscli"
 brew "bitrise"
 brew "carthage"
 brew "libffi"
 brew "libtool"
 brew "pkg-config"
-brew "readline"
-brew "openssl@1.1"
-brew "unbound"
 brew "jansson"
+brew "unbound"
 brew "cask"
 brew "cmake"
 brew "node"
@@ -38,8 +42,6 @@ brew "git"
 brew "git-lfs"
 brew "git-quick-stats"
 brew "pcre"
-brew "sqlite"
-brew "python@3.9"
 brew "glib"
 brew "gnupg", link: false
 brew "go"
@@ -62,6 +64,7 @@ brew "logstash"
 brew "lua"
 brew "mas"
 brew "maven"
+brew "minikube"
 brew "nmap"
 brew "node@10"
 brew "openapi-generator"
@@ -70,6 +73,7 @@ brew "postgresql", restart_service: true
 brew "rabbitmq-c"
 brew "redis"
 brew "ruby"
+brew "sl"
 brew "sofia-sip"
 brew "speexdsp"
 brew "srtp"
@@ -90,6 +94,7 @@ brew "pivotal/tap/springboot"
 brew "signalwire/signalwire/flite"
 brew "signalwire/signalwire/libks"
 brew "signalwire/signalwire/signalwire-c"
+brew "teamookla/speedtest/speedtest"
 cask "adium"
 cask "adoptopenjdk8"
 cask "adoptopenjdk9"
@@ -104,25 +109,23 @@ cask "intellij-idea-ce"
 cask "iterm2"
 cask "java"
 cask "macdown"
+cask "minishift"
 cask "mockoon"
 cask "openvpn-connect"
-cask "periphery"
 cask "sketch"
 cask "sonos"
+cask "swiftpm-catalog"
 cask "tunnelblick"
+cask "virtualbox"
 cask "visual-studio-code"
-mas "1Password 7", id: 1333542190
 mas "AdBlock", id: 1402042596
 mas "Apple Configurator 2", id: 1037126344
 mas "Cinebench", id: 1438772273
 mas "Developer", id: 640199958
 mas "DuckDuckGo Privacy Essentials", id: 1482920575
-mas "GarageBand", id: 682658836
 mas "Grammarly for Safari", id: 1462114288
-mas "iMovie", id: 408981434
 mas "Kaleidoscope", id: 587512244
 mas "Keynote", id: 409183694
-mas "LG Screen Manager", id: 1142051783
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
@@ -131,8 +134,6 @@ mas "Slack", id: 803453959
 mas "Speedtest", id: 1153157709
 mas "Telegram", id: 747648890
 mas "Termius", id: 1176074088
-mas "The Jackbox Party Pack", id: 957862217
-mas "The Jackbox Party Pack 3", id: 1156513849
 mas "The Unarchiver", id: 425424353
 mas "Tweetbot", id: 1384080005
 mas "Twitter", id: 1482454543
