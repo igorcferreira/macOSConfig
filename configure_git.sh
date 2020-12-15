@@ -51,7 +51,7 @@ git config $CONFIGURATION alias.adog "log --all --decorate --oneline --graph"
 
 if [ -n "$GPG_KEY" ]; then
 
-	GPG_PROGRAM="$(which gpg2)"
+	GPG_PROGRAM="$(which gpg)"
 
 	if [ -z "$GPG_PROGRAM" ]; then
 		echo "To enable GPG signature, please, make sure that GPG suite is properly installed on your machine"
