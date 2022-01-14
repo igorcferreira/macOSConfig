@@ -23,7 +23,7 @@ USER_NAME=""
 USER_EMAIL=""
 USE_KALEIDOSCOPE=""
 
-if [ $# -ne 1 ]; then
+if [ $# -lt 1 ]; then
 	print_help
 	exit 1
 fi

@@ -22,6 +22,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/igorcferreira/macOSConfig/
 
 Keep in mind that certain install scripts expects some dependencies already installed. For example, `install_java` expects Homebrew to be installed
 
+If the scripts requires arguments, you can use:
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/igorcferreira/macOSConfig/master/configure_git.sh)" configure_git --global --name 'Some User' --email 'user@domain.com' --gpg_key '12345GBH' --kaleidoscope
+```
+
 ## Link dot files
 
 If you wish to have a copy of my dot files configuration, you can close this repository and run:
