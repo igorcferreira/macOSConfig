@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 # fail if any commands fails
 set -e
 

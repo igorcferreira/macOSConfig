@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 # fail if any commands fails
 #We are skipping the homebrew errors to support beta OS'
 set -e
