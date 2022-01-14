@@ -49,5 +49,5 @@ function install_app_zip {
 	rm -rf "$(pwd)/$APP_NAME.zip"
 }
 
-install_app_pkg 1Password "https://c.1password.com/dist/1P/mac7/1Password-7.4.2.pkg" "/"
-install_app_dmg Sublime\ Text "https://download.sublimetext.com/Sublime%20Text%20Build%203211.dmg" "Sublime Text"
+install_app_pkg 1Password "https://app-updates.agilebits.com/download/OPM7" "/"
+install_app_zip Sublime\ Text "https://download.sublimetext.com/sublime_text_build_4126_mac.zip" "Sublime Text"
