@@ -12,7 +12,7 @@ function print_help() {
     echo "--gpg_key -gk     : GPG key used to configure commit default signature (optional)"
     echo "--global          : Adds the configuration to the global configuration of git"
     echo "--local           : Adds the configuration to the local configuration of git"
-	echp "--kaleidoscope -k : Install Kaleidoscope as mergetool"
+    echo "--kaleidoscope -k : Install Kaleidoscope as mergetool"
     echo ""
     echo "If neither --local or --global is passed, the script uses --global as default"
 }
