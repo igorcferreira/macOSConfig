@@ -23,6 +23,11 @@ USER_NAME=""
 USER_EMAIL=""
 USE_KALEIDOSCOPE=""
 
+if [ $# -ne 1 ]; then
+	print_help
+	exit 1
+fi
+
 while [ -n "$1" ]; do
     case "$1" in
         --global | --local) CONFIGURATION="$1";;
