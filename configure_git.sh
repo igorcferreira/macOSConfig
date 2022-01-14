@@ -1,17 +1,18 @@
-#!/bin/bash
+#!/bin/zsh
 
 set -e
 
 function print_help() {
     echo "Usage:"
-    echo "$0 --global --gpg_key AF08731 --name \"User name\" --email \"user@email.com\""
+    echo "$0 --global --gpg_key AF08731 --name \"User name\" --email \"user@email.com\" --kaleidoscope"
     echo ""
     echo "Variables:"
-    echo "--name    -n : Name that will be set as user.name (optional)"
-    echo "--email   -e : Email that will be set as user.email (optional)"
-    echo "--gpg_key -gk: GPG key used to configure commit default signature (optional)"
-    echo "--global     : Adds the configuration to the global configuration of git"
-    echo "--local      : Adds the configuration to the local configuration of git"
+    echo "--name    -n      : Name that will be set as user.name (optional)"
+    echo "--email   -e      : Email that will be set as user.email (optional)"
+    echo "--gpg_key -gk     : GPG key used to configure commit default signature (optional)"
+    echo "--global          : Adds the configuration to the global configuration of git"
+    echo "--local           : Adds the configuration to the local configuration of git"
+	echp "--kaleidoscope -k : Install Kaleidoscope as mergetool"
     echo ""
     echo "If neither --local or --global is passed, the script uses --global as default"
 }
@@ -20,6 +21,7 @@ GPG_KEY=""
 CONFIGURATION=""
 USER_NAME=""
 USER_EMAIL=""
+USE_KALEIDOSCOPE=""
 
 while [ -n "$1" ]; do
     case "$1" in
@@ -27,6 +29,7 @@ while [ -n "$1" ]; do
         --gpg_key | -gk) GPG_KEY="$2" && shift;;
         --name | -n) USER_NAME="$2" && shift;;
         --email | -e) USER_EMAIL="$2" && shift;;
+		--kaleidoscope | -k) USE_KALEIDOSCOPE="true";;
         --help | -h) print_help && exit 0;;
     esac
     shift
@@ -44,6 +47,22 @@ fi
 if [ -n "$USER_EMAIL" ]; then
 	echo "Setting email $USER_EMAIL"
 	git config $CONFIGURATION user.email "$USER_EMAIL"
+fi
+
+if [ -n "$USE_KALEIDOSCOPE" ]; then
+	echo "Configuring Kaleidoscope as mergetool"
+	git config $CONFIGURATION merge.tool 'Kaleidoscope'
+	git config $CONFIGURATION mergetool.prompt false
+	git config $CONFIGURATION mergetool.keepBackup false
+	git config $CONFIGURATION mergetool.Kaleidoscope.cmd 'ksdiff --merge --output "$MERGED" --base "$BASE" -- "$LOCAL" --snapshot "$REMOTE" --snapshot'
+	git config $CONFIGURATION mergetool.Kaleidoscope.trustExitCode true
+
+	echo "Configuring Kaleidoscope as diftool"
+	git config $CONFIGURATION diff.tool 'Kaleidoscope'
+	git config $CONFIGURATION difftool.prompt false
+	git config $CONFIGURATION difftool.Kaleidoscope.cmd 'ksdiff --partial-changeset --relative-path "$MERGED" -- "$LOCAL" "$REMOTE"'
+else
+	echo "Skipping Kaleidoscope: ${USE_KALEIDOSCOPE}"
 fi
 
 echo "Adding adog alias"
