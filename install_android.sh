@@ -2,8 +2,10 @@
 # fail if any commands fails
 set -e
 
+#commandlinetools-mac-7583922_latest.zip
+
 ANDROID_HOME="$HOME/Library/Android/sdk"
-ANDROID_TOOL_VERSION="sdk-tools-darwin-4333796"
+ANDROID_TOOL_VERSION="commandlinetools-mac-7583922_latest"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 function install_component {
@@ -16,7 +18,7 @@ if [ -d "$ANDROID_HOME" ]; then
 	echo "Android sdk already installed"
 else
 	mkdir -p "$ANDROID_HOME"
-	wget "https://dl.google.com/android/repository/$ANDROID_TOOL_VERSION.zip" -O sdk.zip && unzip sdk.zip -d $ANDROID_HOME && rm sdk.zip
+	curl -L -X GET "https://dl.google.com/android/repository/$ANDROID_TOOL_VERSION.zip" -o sdk.zip && unzip sdk.zip -d $ANDROID_HOME && rm sdk.zip
 fi
 
 if [ -f "$HOME/.android/repositories.cfg" ]; then
