@@ -25,9 +25,9 @@ while [ -n "$1" ]; do
     case "$1" in
         --global | --local) CONFIGURATION="$1";;
         --gpg_key | -gk) GPG_KEY="$2" && shift;;
-		--name | -n) USER_NAME="$2" && shift;;
-		--email | -e) USER_EMAIL="$2" && shift;;
-		--help | -h) print_help && exit 0;;
+        --name | -n) USER_NAME="$2" && shift;;
+        --email | -e) USER_EMAIL="$2" && shift;;
+        --help | -h) print_help && exit 0;;
     esac
     shift
 done
@@ -51,19 +51,20 @@ git config $CONFIGURATION alias.adog "log --all --decorate --oneline --graph"
 
 if [ -n "$GPG_KEY" ]; then
 
-	GPG_PROGRAM="$(which gpg)"
+	if which gpg > /dev/null; then
 
-	if [ -z "$GPG_PROGRAM" ]; then
+		GPG_PROGRAM="$(which gpg)"
+
+		echo "Setting GPG Key: $GPG_KEY"
+		git config $CONFIGURATION user.signingkey "$GPG_KEY"
+
+		echo "Setting gpg2 as program"
+		git config $CONFIGURATION gpg.program "$GPG_PROGRAM"
+
+		echo "Enabling commit signature"
+		git config $CONFIGURATION commit.gpgsign true
+	else
 		echo "To enable GPG signature, please, make sure that GPG suite is properly installed on your machine"
 		exit 1;
 	fi
-
-	echo "Setting GPG Key: $GPG_KEY"
-	git config $CONFIGURATION user.signingkey "$GPG_KEY"
-
-	echo "Setting gpg2 as program"
-	git config $CONFIGURATION gpg.program "$GPG_PROGRAM"
-
-	echo "Enabling commit signature"
-	git config $CONFIGURATION commit.gpgsign true
 fi
