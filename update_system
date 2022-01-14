@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+[[ -s "$HOME/.local.env" ]] && source "$HOME/.local.env"
+
+BREW_COMMAND="${BREW_PATH}/bin/brew"
+
+echo "Running brew update" && \
+$BREW_COMMAND "update" && \
+echo "Running brew upgrade" && \
+$BREW_COMMAND "upgrade" && \
+echo "Running brew cleanup" && \
+$BREW_COMMAND "cleanup" "--prune=all"
+
+# bitrise-cli update process
+BITRISE_PATH="${BREW_PATH}/bin/bitrise"
+
+echo "Running bitrise stepenv update" && \
+$BITRISE_PATH "stepman" "update" && \
+echo "Running bitrise plugin update" && \
+$BITRISE_PATH "plugin" "update"
+
+# MAS upgrade
+MAS_PATH="${BREW_PATH}/bin/mas"
+
+$MAS_PATH "upgrade"
