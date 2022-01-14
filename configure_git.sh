@@ -66,8 +66,6 @@ if [ -n "$USE_KALEIDOSCOPE" ]; then
 	git config $CONFIGURATION diff.tool 'Kaleidoscope'
 	git config $CONFIGURATION difftool.prompt false
 	git config $CONFIGURATION difftool.Kaleidoscope.cmd 'ksdiff --partial-changeset --relative-path "$MERGED" -- "$LOCAL" "$REMOTE"'
-else
-	echo "Skipping Kaleidoscope: ${USE_KALEIDOSCOPE}"
 fi
 
 echo "Adding adog alias"
