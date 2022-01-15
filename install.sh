@@ -17,7 +17,7 @@ sudo xcode-select --install || true
 set -e
 
 execute_remote_script install_homebrew
-execute_remote_script install_rvm
+execute_remote_script configure_ruby
 execute_remote_script install_java
 execute_remote_script install_android
 execute_remote_script install_applications
