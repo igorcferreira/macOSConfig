@@ -16,7 +16,6 @@ if [ -d "$ANDROID_HOME" ]; then
 else
 	mkdir -p "$ANDROID_HOME"
 	curl -L -X GET "https://dl.google.com/android/repository/${ANDROID_TOOL_VERSION}.zip" -o sdk.zip && unzip sdk.zip -d "${ANDROID_HOME}" && rm sdk.zip
-	JAVA_HOME="$(/usr/libexec/java_home -v 1.8)" yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
 fi
 
 if [ -f "$HOME/.android/repositories.cfg" ]; then
