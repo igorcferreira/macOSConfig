@@ -11,17 +11,24 @@ else
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-set +e
-BREWFILE="$TMPDIR/Brewfile"
+LOCAL_BREW_FILE="$(pwd)/Brewfile"
+if [ -f "$LOCAL_BREW_FILE" ]; then
+	echo "Installing ${LOCAL_BREW_FILE}"
+	brew bundle
+else
+	echo "Getting Brewfile from repo"
+	set +e
+	BREWFILE="$TMPDIR/Brewfile"
 
-if [ -f "$BREWFILE" ]; then
-	echo "Removing temp Brewfile"
+	if [ -f "$BREWFILE" ]; then
+		echo "Removing temp Brewfile"
+		rm "$BREWFILE"
+	fi
+
+	curl "https://raw.githubusercontent.com/igorcferreira/macOSConfig/master/Brewfile" > "$BREWFILE"
+	brew bundle --file=$BREWFILE || true
+	set -e
 	rm "$BREWFILE"
 fi
-
-curl "https://raw.githubusercontent.com/igorcferreira/macOSConfig/master/Brewfile" > "$BREWFILE"
-brew bundle --file=$BREWFILE || true
-set -e
-rm "$BREWFILE"
 
 echo "Installed Homebrew"
