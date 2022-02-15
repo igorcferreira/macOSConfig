@@ -27,7 +27,6 @@ brew "teamookla/speedtest/speedtest"
 cask "adoptopenjdk"
 cask "adoptopenjdk11"
 cask "adoptopenjdk8"
-cask "brave-browser"
 cask "docker"
 cask "firefox"
 cask "gpg-suite-no-mail"
@@ -35,7 +34,6 @@ cask "microsoft-auto-update"
 cask "microsoft-outlook"
 cask "slack"
 cask "sonos"
-cask "spotify"
 cask "sublime-merge"
 cask "sublime-text"
 cask "telegram"
@@ -54,3 +52,4 @@ mas "Pages", id: 409201541
 mas "TestFlight", id: 899247664
 mas "Tweetbot", id: 1384080005
 mas "Xcode", id: 497799835
+mas "UTMBeGone", id: 1530867730
