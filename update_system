@@ -8,6 +8,8 @@ echo "Running brew update" && \
 $BREW_COMMAND "update" && \
 echo "Running brew upgrade" && \
 $BREW_COMMAND "upgrade" && \
+echo "Running brew upgrade --cask --greedy" && \
+$BREW_COMMAND "upgrade" "--cask" "--greedy"
 echo "Running brew cleanup" && \
 $BREW_COMMAND "cleanup" "--prune=all"
 
