@@ -2,7 +2,7 @@
 # fail if any commands fails
 set -e
 
-SCRIPT_REPO="https://raw.githubusercontent.com/igorcferreira/macOSConfig/master"
+SCRIPT_REPO="https://raw.githubusercontent.com/igorcferreira/macOSConfig/main"
 
 function execute_script {
 	COMMAND_NAME="$1.sh"

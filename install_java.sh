@@ -9,8 +9,7 @@ else
     exit 1
 fi
 
-brew tap adoptopenjdk/openjdk
-brew install --cask adoptopenjdk
+brew install --cask temurin
 brew cleanup
 
 if [ -z "$(echo $JAVA_HOME)" ]; then

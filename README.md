@@ -7,7 +7,7 @@ This repo works as a container of tools that can be used to setup a macOS instan
 To run this script, just execute:
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/igorcferreira/macOSConfig/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/igorcferreira/macOSConfig/main/install.sh)"
 ```
 
 This script may ask input at some point, but, at the end, all will be whell
@@ -17,7 +17,7 @@ This script may ask input at some point, but, at the end, all will be whell
 You can run install scripts individually with, for example:
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/igorcferreira/macOSConfig/master/install_homebrew.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/igorcferreira/macOSConfig/main/install_homebrew.sh)"
 ```
 
 Keep in mind that certain install scripts expects some dependencies already installed. For example, `install_java` expects Homebrew to be installed
@@ -25,7 +25,7 @@ Keep in mind that certain install scripts expects some dependencies already inst
 If the scripts requires arguments, you can use:
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/igorcferreira/macOSConfig/master/configure_git.sh)" configure_git --global --name 'Some User' --email 'user@domain.com' --gpg_key '12345GBH' --kaleidoscope
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/igorcferreira/macOSConfig/main/configure_git.sh)" configure_git --global --name 'Some User' --email 'user@domain.com' --gpg_key '12345GBH' --kaleidoscope
 ```
 
 ## Link dot files

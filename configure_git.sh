@@ -2,17 +2,19 @@
 
 set -e
 
+COMMAND_NAME="$0"
+
 function print_help() {
     echo "Usage:"
-    echo "$0 --global --gpg_key AF08731 --name \"User name\" --email \"user@email.com\" --kaleidoscope"
+    echo "${COMMAND_NAME} --global --gpg_key AF08731 --name \"User name\" --email \"user@email.com\" --kaleidoscope"
     echo ""
     echo "Variables:"
-    echo "--name    -n      : Name that will be set as user.name (optional)"
-    echo "--email   -e      : Email that will be set as user.email (optional)"
-    echo "--gpg_key -gk     : GPG key used to configure commit default signature (optional)"
-    echo "--global          : Adds the configuration to the global configuration of git"
-    echo "--local           : Adds the configuration to the local configuration of git"
-    echo "--kaleidoscope -k : Install Kaleidoscope as mergetool"
+    echo "--name         -n: Name that will be set as user.name (optional)"
+    echo "--email        -e: Email that will be set as user.email (optional)"
+    echo "--gpg_key     -gk: GPG key used to configure commit default signature (optional)"
+    echo "--global         : Adds the configuration to the global configuration of git"
+    echo "--local          : Adds the configuration to the local configuration of git"
+    echo "--kaleidoscope -k: Install Kaleidoscope as mergetool"
     echo ""
     echo "If neither --local or --global is passed, the script uses --global as default"
 }
