@@ -2,21 +2,7 @@
 # fail if any commands fails
 set -e
 
-# These variables are configured for a default M1 mac. If these need to be overwritten on your machine, create a `~/.local.env` file with the values to be overwritten
-BREW_PATH="/opt/homebrew"
-BREW_BIN_PATH="${BREW_PATH}/bin"
-
-[[ -s "${HOME}/.local.env" ]] && source "${HOME}/.local.env"
-
 ANDROID_HOME="${HOME}/Library/Android/sdk"
-
-if [ -d "${ANDROID_HOME}" ]; then
-	echo "Android sdk already installed"
-else
-	ANDROID_TOOL_VERSION="commandlinetools-mac-8092744_latest"
-	mkdir -p "${ANDROID_HOME}"
-	curl -L -X GET "https://dl.google.com/android/repository/${ANDROID_TOOL_VERSION}.zip" -o sdk.zip && unzip sdk.zip -d "${ANDROID_HOME}" && rm sdk.zip
-fi
 
 if [ -f "${HOME}/.android/repositories.cfg" ]; then
 	echo "Config file already in place"
@@ -28,7 +14,27 @@ else
 	touch "${HOME}/.android/repositories.cfg"
 fi
 
-JAVA_HOME="$(/usr/libexec/java_home -v 1.8)" yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
-JAVA_HOME="$(/usr/libexec/java_home -v 1.8)" $ANDROID_HOME/tools/bin/sdkmanager --update
+if [ -d "${ANDROID_HOME}" ]; then
+	echo "Android sdk already installed"
+else
+	ANDROID_TOOL_VERSION="commandlinetools-mac-8092744_latest"
+	mkdir -p "${ANDROID_HOME}"
+	
+	TEMP_DIR="$(pwd)/.tmp"
+	if [ -d "${TEMP_DIR}" ]; then
+		rm -rf "${TEMP_DIR}"
+	fi
+	
+	curl -L -X GET "https://dl.google.com/android/repository/${ANDROID_TOOL_VERSION}.zip" -o sdk.zip && unzip sdk.zip -d "${TEMP_DIR}" && rm sdk.zip
+	JAVA_HOME="$(/usr/libexec/java_home)" yes | $TEMP_DIR/cmdline-tools/bin/sdkmanager --licenses --sdk_root="${ANDROID_HOME}"
+	JAVA_HOME="$(/usr/libexec/java_home)" $TEMP_DIR/cmdline-tools/bin/sdkmanager --install "cmdline-tools;latest" --sdk_root="${ANDROID_HOME}"
+	
+	rm -rf "$TEMP_DIR"
 
-echo "Installed Android"
+	JAVA_HOME="$(/usr/libexec/java_home)" yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
+	JAVA_HOME="$(/usr/libexec/java_home)" sdkmanager --install "emulator" "platform-tools" "extras;google;google_play_services"
+fi
+
+JAVA_HOME="$(/usr/libexec/java_home)" $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --update
+
+echo "Installed Android on ${ANDROID_HOME}"
