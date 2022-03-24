@@ -31,8 +31,7 @@ else
 	
 	rm -rf "$TEMP_DIR"
 
-	JAVA_HOME="$(/usr/libexec/java_home)" yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
-	JAVA_HOME="$(/usr/libexec/java_home)" sdkmanager --install "emulator" "platform-tools" "extras;google;google_play_services"
+	JAVA_HOME="$(/usr/libexec/java_home)" $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --install "emulator" "platform-tools" "extras;google;google_play_services"
 fi
 
 JAVA_HOME="$(/usr/libexec/java_home)" $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --update
