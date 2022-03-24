@@ -10,16 +10,10 @@ BREW_BIN_PATH="${BREW_PATH}/bin"
 
 ANDROID_HOME="${HOME}/Library/Android/sdk"
 
-if which brew > /dev/null; then
-	ANDROID_HOME="${BREW_PATH}/share/android-sdk"
-	brew install --cask homebrew/cask-versions/temurin8
-	brew install --cask android-sdk
-	brew cleanup
-	[[ -s "${HOME}/.zprofile" ]] && echo "\nexport ANDROID_HOME=${ANDROID_HOME}\n" >> "${HOME}/.zprofile"
-else if [ -d "${ANDROID_HOME}" ]; then
+if [ -d "${ANDROID_HOME}" ]; then
 	echo "Android sdk already installed"
 else
-	ANDROID_TOOL_VERSION="commandlinetools-mac-7583922_latest"
+	ANDROID_TOOL_VERSION="commandlinetools-mac-8092744_latest"
 	mkdir -p "${ANDROID_HOME}"
 	curl -L -X GET "https://dl.google.com/android/repository/${ANDROID_TOOL_VERSION}.zip" -o sdk.zip && unzip sdk.zip -d "${ANDROID_HOME}" && rm sdk.zip
 fi
