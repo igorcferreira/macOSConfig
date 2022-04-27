@@ -2,15 +2,7 @@
 # fail if any commands fails
 set -e
 
-RELEASE_VERSION="main"
-
-while [ -n "$1" ]; do
-    case "$1" in
-        --version | --v) RELEASE_VERSION="$1";;
-    esac
-    shift
-done
-
+RELEASE_VERSION="1.0.0"
 SCRIPT_REPO="https://raw.githubusercontent.com/igorcferreira/macOSConfig/${RELEASE_VERSION}"
 
 function execute_script {
@@ -26,6 +18,13 @@ function execute_script {
 		sh -c "$(curl -fsSL "${SCRIPT_REPO}/${COMMAND_NAME}")"
 	fi
 }
+
+while [ -n "$1" ]; do
+    case "$1" in
+        --version | -v) echo "${RELEASE_VERSION}" && exit 0;;
+    esac
+    shift
+done
 
 set +e
 #Errors in the install of command line 
