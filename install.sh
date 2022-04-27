@@ -2,7 +2,16 @@
 # fail if any commands fails
 set -e
 
-SCRIPT_REPO="https://raw.githubusercontent.com/igorcferreira/macOSConfig/main"
+RELEASE_VERSION="main"
+
+while [ -n "$1" ]; do
+    case "$1" in
+        --version | --v) RELEASE_VERSION="$1";;
+    esac
+    shift
+done
+
+SCRIPT_REPO="https://raw.githubusercontent.com/igorcferreira/macOSConfig/${RELEASE_VERSION}"
 
 function execute_script {
 	COMMAND_NAME="$1.sh"
