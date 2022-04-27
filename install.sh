@@ -2,7 +2,7 @@
 # fail if any commands fails
 set -e
 
-RELEASE_VERSION="1.0.0"
+RELEASE_VERSION="1.0.1"
 SCRIPT_REPO="https://raw.githubusercontent.com/igorcferreira/macOSConfig/${RELEASE_VERSION}"
 
 function execute_script {
