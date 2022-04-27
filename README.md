@@ -7,7 +7,7 @@ This repo works as a container of tools that can be used to setup a macOS instan
 To run this script, just execute:
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/igorcferreira/macOSConfig/main/install.sh)"
+sh -c "$(curl -fsSL https://github.com/igorcferreira/macOSConfig/releases/download/1.0.0/install.sh)"
 ```
 
 This script may ask input at some point, but, at the end, all will be whell
