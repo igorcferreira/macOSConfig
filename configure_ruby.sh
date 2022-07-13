@@ -4,24 +4,14 @@ set -e
 
 SCRIPT_REPO="https://raw.githubusercontent.com/igorcferreira/macOSConfig/main"
 
-if which rbenv > /dev/null; then
-	echo "Rbenv already installed"
-else 
-	if which brew > /dev/null; then
-		echo "Installing Rbenv"
-		brew install rbenv
-		BREW_PREFIX="$(brew --prefix)"
-		eval "$($BREW_PREFIX/bin/rbenv init - zsh)"
-	else
-		echo "Rbenv cannot be configured"
-		echo 1
+if which rvm > /dev/null; then
+	echo "RVM already installed"
+else
+	if which gpg > /dev/null; then
+		gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 	fi
+	curl -sSL https://get.rvm.io | bash -s stable --rails --ignore-dotfiles
 fi
-
-LATEST_VERSION="$(rbenv install -l | grep -v - | tail -1)"
-echo "Installing and configuring Ruby ${LATEST_VERSION}"
-rbenv install -s "${LATEST_VERSION}"
-rbenv global "${LATEST_VERSION}"
 
 LOCAL_GEM_FILE="$(pwd)/Gemlist"
 if [ -f "${LOCAL_GEM_FILE}" ]; then
