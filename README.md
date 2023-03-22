@@ -30,7 +30,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/igorcferreira/macOSConfig/
 
 ## Link dot files
 
-If you wish to have a copy of my dot files configuration, you can close this repository and run:
+If you wish to have a copy of my dot files configuration, you can clone this repository and run:
 
 ```sh
 ./install_dot_files.sh
