@@ -18,8 +18,3 @@ echo "Running bitrise stepenv update" && \
 $BITRISE_PATH "stepman" "update" && \
 echo "Running bitrise plugin update" && \
 $BITRISE_PATH "plugin" "update"
-
-# MAS upgrade
-MAS_PATH="${BREW_PATH}/bin/mas"
-
-$MAS_PATH "upgrade"
