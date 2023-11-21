@@ -10,7 +10,13 @@ else
 	if which gpg > /dev/null; then
 		gpg --keyserver hkps://keys.openpgp.org --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 	fi
-	curl -sSL https://get.rvm.io | bash -s stable --rails --ignore-dotfiles
+	curl -sSL https://get.rvm.io | bash -s stable --ignore-dotfiles
+	if which brew > /dev/null; then
+		brew install openssl
+		rvm install ruby --latest "--with-openssl-dir=$(brew --prefix openssl)"
+	else
+		rvm install ruby --latest
+	fi
 fi
 
 LOCAL_GEM_FILE="$(pwd)/Gemlist"
