@@ -2,19 +2,29 @@
 
 [[ -s "$HOME/.local.env" ]] && source "$HOME/.local.env"
 
+#Brew update
 BREW_COMMAND="${BREW_PATH}/bin/brew"
-
-echo "Running brew update" && \
-$BREW_COMMAND "update" && \
-echo "Running brew upgrade" && \
-$BREW_COMMAND "upgrade" && \
-echo "Running brew cleanup" && \
-$BREW_COMMAND "cleanup" "--prune=all"
+if [ -f "${BREW_COMMAND}" ]; then
+	echo "Running brew update" && \
+	$BREW_COMMAND "update" && \
+	echo "Running brew upgrade" && \
+	$BREW_COMMAND "upgrade" && \
+	echo "Running brew cleanup" && \
+	$BREW_COMMAND "cleanup" "--prune=all"
+fi
 
 # bitrise-cli update process
 BITRISE_PATH="${BREW_PATH}/bin/bitrise"
+if [ -f "${BITRISE_PATH}" ]; then
+	echo "Running bitrise stepenv update" && \
+	$BITRISE_PATH "stepman" "update" && \
+	echo "Running bitrise plugin update" && \
+	$BITRISE_PATH "plugin" "update"
+fi
 
-echo "Running bitrise stepenv update" && \
-$BITRISE_PATH "stepman" "update" && \
-echo "Running bitrise plugin update" && \
-$BITRISE_PATH "plugin" "update"
+# Oh my ZSH update
+OMZ_UPDATE_COMMAND="${HOME}/.oh-my-zsh/tools/upgrade.sh"
+if [ -f "${OMZ_UPDATE_COMMAND}" ]; then
+	echo "Updating OMZ"
+	"$HOME/.oh-my-zsh/tools/upgrade.sh"
+fi
