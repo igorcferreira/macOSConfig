@@ -16,8 +16,6 @@ fi
 # bitrise-cli update process
 BITRISE_PATH="${BREW_PATH}/bin/bitrise"
 if [ -f "${BITRISE_PATH}" ]; then
-	echo "Running bitrise stepenv update" && \
-	$BITRISE_PATH "stepman" "update" && \
 	echo "Running bitrise plugin update" && \
 	$BITRISE_PATH "plugin" "update"
 fi
