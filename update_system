@@ -26,3 +26,8 @@ if [ -f "${OMZ_UPDATE_COMMAND}" ]; then
 	echo "Updating OMZ"
 	"$HOME/.oh-my-zsh/tools/upgrade.sh"
 fi
+
+if  [ -x "$(command -v npm)" ]; then
+	echo "Updating node global packages"
+	npm update -g
+fi
