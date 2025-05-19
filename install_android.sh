@@ -17,7 +17,7 @@ fi
 if [ -d "${ANDROID_HOME}" ]; then
 	echo "Android sdk already installed"
 else
-	ANDROID_TOOL_VERSION="commandlinetools-mac-8092744_latest"
+	ANDROID_TOOL_VERSION="commandlinetools-mac-13114758_latest"
 	mkdir -p "${ANDROID_HOME}"
 	
 	TEMP_DIR="$(pwd)/.tmp"

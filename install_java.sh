@@ -9,7 +9,7 @@ else
     exit 1
 fi
 
-brew install --cask temurin
+brew install --cask graalvm-jdk
 brew cleanup
 
 if [ -z "$(echo $JAVA_HOME)" ]; then
