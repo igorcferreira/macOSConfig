@@ -23,6 +23,7 @@ brew "direnv"
 brew "docker"
 brew "docker-buildx"
 brew "docker-compose"
+brew "docker-credential-helper"
 brew "flac"
 brew "ffmpeg"
 brew "frum"
@@ -54,7 +55,6 @@ brew "python-tk@3.10"
 brew "ruby-build"
 brew "rust"
 brew "rustup"
-brew "speedtest-cli"
 brew "swiftlint"
 brew "vips"
 brew "wget"
@@ -64,6 +64,7 @@ brew "yarn"
 brew "zlib"
 brew "igorcferreira/tap/install-aab"
 brew "lokalise/cli-2/lokalise2"
+brew "teamookla/speedtest/speedtest"
 cask "1password-cli"
 cask "android-studio"
 cask "gpg-suite-no-mail"
@@ -80,6 +81,7 @@ mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
 mas "Apple Configurator", id: 1037126344
 mas "Croissant", id: 6670288979
+mas "DaVinci Resolve", id: 571213070
 mas "Developer", id: 640199958
 mas "Grammarly for Safari", id: 1462114288
 mas "IceCubesApp", id: 6444915884
@@ -136,6 +138,7 @@ vscode "kaleidoscope-app.vscode-ksdiff"
 vscode "koichisasada.vscode-rdbg"
 vscode "lalithk90.springboot-mvc-with-thymeleaf"
 vscode "lalithk90.thymeleaf-html5-snippets"
+vscode "llvm-vs-code-extensions.lldb-dap"
 vscode "mathiasfrohlich.kotlin"
 vscode "mechatroner.rainbow-csv"
 vscode "mhutchie.git-graph"
