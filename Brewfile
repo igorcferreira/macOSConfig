@@ -96,7 +96,6 @@ mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
-mas "Steam Link", id: 1246969117
 mas "Swift Playground", id: 1496833156
 mas "Telegram", id: 747648890
 mas "TestFlight", id: 899247664
