@@ -1,13 +1,12 @@
 tap "heroku/brew"
+tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "igorcferreira/tap"
 tap "lokalise/cli-2"
 tap "majd/repo"
 tap "teamookla/speedtest"
-brew "readline"
 brew "openjdk"
 brew "apktool"
 brew "autoconf"
@@ -30,6 +29,7 @@ brew "frum"
 brew "gh"
 brew "git"
 brew "git-lfs"
+brew "readline"
 brew "gnupg"
 brew "go"
 brew "gradle"
@@ -62,11 +62,13 @@ brew "xcbeautify"
 brew "xcode-kotlin"
 brew "yarn"
 brew "zlib"
+brew "zsh"
 brew "igorcferreira/tap/install-aab"
 brew "lokalise/cli-2/lokalise2"
 brew "teamookla/speedtest/speedtest"
 cask "1password-cli"
 cask "android-studio"
+cask "firefox"
 cask "gpg-suite-no-mail"
 cask "graalvm-jdk"
 cask "graalvm-jdk@17"
@@ -81,7 +83,6 @@ mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
 mas "Apple Configurator", id: 1037126344
 mas "Croissant", id: 6670288979
-mas "DaVinci Resolve", id: 571213070
 mas "Developer", id: 640199958
 mas "Grammarly for Safari", id: 1462114288
 mas "IceCubesApp", id: 6444915884
@@ -96,6 +97,7 @@ mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
+mas "Slack", id: 803453959
 mas "Swift Playground", id: 1496833156
 mas "Telegram", id: 747648890
 mas "TestFlight", id: 899247664
@@ -141,6 +143,7 @@ vscode "llvm-vs-code-extensions.lldb-dap"
 vscode "mathiasfrohlich.kotlin"
 vscode "mechatroner.rainbow-csv"
 vscode "mhutchie.git-graph"
+vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
 vscode "ms-mssql.data-workspace-vscode"
