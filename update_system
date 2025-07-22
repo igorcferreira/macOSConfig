@@ -24,7 +24,7 @@ fi
 OMZ_UPDATE_COMMAND="${HOME}/.oh-my-zsh/tools/upgrade.sh"
 if [ -f "${OMZ_UPDATE_COMMAND}" ]; then
 	echo "Updating OMZ"
-	"$HOME/.oh-my-zsh/tools/upgrade.sh"
+	"$OMZ_UPDATE_COMMAND"
 fi
 
 if  [ -x "$(command -v npm)" ]; then
