@@ -10,11 +10,14 @@ tap "teamookla/speedtest"
 brew "openjdk"
 brew "apktool"
 brew "autoconf"
+brew "readline"
 brew "autoenv"
 brew "automake"
 brew "bitrise"
 brew "bundletool"
 brew "cmake"
+brew "libyaml"
+brew "cocoapods"
 brew "colima"
 brew "coreutils"
 brew "dependency-check"
@@ -29,7 +32,6 @@ brew "frum"
 brew "gh"
 brew "git"
 brew "git-lfs"
-brew "readline"
 brew "gnupg"
 brew "go"
 brew "gradle"
@@ -39,7 +41,6 @@ brew "ipatool"
 brew "kdoctor"
 brew "kotlin"
 brew "libffi"
-brew "libyaml"
 brew "lighttpd"
 brew "mas"
 brew "maven"
@@ -76,6 +77,7 @@ cask "graalvm-jdk@21"
 cask "musicstreamsync"
 cask "postman"
 cask "sonos"
+cask "temurin@11"
 cask "visual-studio-code"
 cask "vlc"
 cask "zoom"
@@ -85,10 +87,8 @@ mas "Apple Configurator", id: 1037126344
 mas "Croissant", id: 6670288979
 mas "Developer", id: 640199958
 mas "Grammarly for Safari", id: 1462114288
-mas "IceCubesApp", id: 6444915884
 mas "iMovie", id: 408981434
 mas "Ivory", id: 6444602274
-mas "Kaleidoscope", id: 1575557335
 mas "Keynote", id: 409183694
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft Outlook", id: 985367838
@@ -155,6 +155,7 @@ vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-toolsai.jupyter"
 vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
