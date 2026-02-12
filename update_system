@@ -31,3 +31,8 @@ if  [ -x "$(command -v npm)" ]; then
 	echo "Updating node global packages"
 	npm update -g
 fi
+
+if  [ -x "$(command -v swiftly)" ]; then
+	echo "Updating swiftly"
+	swiftly self-update --assume-yes
+fi
