@@ -11,7 +11,6 @@ brew "autoenv"
 brew "automake"
 brew "bitrise"
 brew "bundletool"
-brew "pkgconf"
 brew "cmake"
 brew "libyaml"
 brew "cocoapods"
@@ -47,7 +46,7 @@ brew "nowplaying-cli"
 brew "nvm"
 brew "protobuf"
 brew "openapi-generator"
-brew "opencv"
+brew "pkgconf"
 brew "python@3.10"
 brew "python-tk@3.10"
 brew "pytorch"
@@ -86,7 +85,6 @@ mas "Developer", id: 640199958
 mas "iMovie", id: 408981434
 mas "Ivory", id: 6444602274
 mas "Keynote", id: 409183694
-mas "Microsoft Outlook", id: 985367838
 mas "Numbers", id: 409203825
 mas "OneDrive", id: 823766827
 mas "Pages", id: 409201541
