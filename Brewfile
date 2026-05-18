@@ -78,12 +78,11 @@ mas "Amphetamine", id: 937984704
 mas "Apple Configurator", id: 1037126344
 mas "Croissant", id: 6670288979
 mas "Developer", id: 640199958
-mas "iMovie", id: 408981434
 mas "Ivory", id: 6444602274
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
+mas "Keynote", id: 361285480
+mas "Numbers", id: 361304891
 mas "OneDrive", id: 823766827
-mas "Pages", id: 409201541
+mas "Pages", id: 361309726
 mas "PostPortuguese", id: 0
 mas "Slack", id: 803453959
 mas "Swift Playground", id: 1496833156
@@ -101,3 +100,7 @@ go "github.com/cweill/gotests/gotests"
 go "github.com/josharian/impl"
 go "github.com/arkadiyt/protodump/cmd/protodump"
 go "honnef.co/go/tools/cmd/staticcheck"
+npm "@anthropic-ai/claude-code"
+npm "corepack"
+npm "npm-check-updates"
+npm "sequelize-cli"
