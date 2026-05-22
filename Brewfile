@@ -44,7 +44,9 @@ brew "nowplaying-cli"
 brew "nvm"
 brew "protobuf"
 brew "openapi-generator"
+brew "pango"
 brew "pkgconf"
+brew "poppler"
 brew "python@3.10"
 brew "python-tk@3.10"
 brew "pytorch"
@@ -80,11 +82,13 @@ mas "Croissant", id: 6670288979
 mas "Developer", id: 640199958
 mas "Ivory", id: 6444602274
 mas "Keynote", id: 361285480
+mas "Kickstart", id: 6758355178
 mas "Numbers", id: 361304891
 mas "OneDrive", id: 823766827
 mas "Pages", id: 361309726
 mas "PostPortuguese", id: 0
 mas "Slack", id: 803453959
+mas "Snapsmith", id: 6760035733
 mas "Swift Playground", id: 1496833156
 mas "Telegram", id: 747648890
 mas "TestFlight", id: 899247664
@@ -100,7 +104,4 @@ go "github.com/cweill/gotests/gotests"
 go "github.com/josharian/impl"
 go "github.com/arkadiyt/protodump/cmd/protodump"
 go "honnef.co/go/tools/cmd/staticcheck"
-npm "@anthropic-ai/claude-code"
 npm "corepack"
-npm "npm-check-updates"
-npm "sequelize-cli"
