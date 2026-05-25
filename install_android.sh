@@ -2,7 +2,7 @@
 # fail if any commands fails
 set -e
 
-ANDROID_HOME="${HOME}/Library/Android/sdk"
+export ANDROID_HOME="${HOME}/Library/Android/sdk"
 
 if [ -f "${HOME}/.android/repositories.cfg" ]; then
 	echo "Config file already in place"
@@ -37,3 +37,7 @@ fi
 JAVA_HOME="$(/usr/libexec/java_home)" $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --update
 
 echo "Installed Android on ${ANDROID_HOME}"
+
+echo "Installing Android CLI"
+
+JAVA_HOME="$(/usr/libexec/java_home)" curl -fsSL https://dl.google.com/android/cli/latest/darwin_arm64/install.sh | bash 
