@@ -64,16 +64,12 @@ brew "kdoctor"
 brew "kotlin"
 # Anti-bikeshedding Kotlin linter with built-in formatter
 brew "ktlint"
-# Portable Foreign Function Interface library
-brew "libffi"
-# Small memory footprint, flexible web-server
-brew "lighttpd"
-# Command-line interface for SQLite
-brew "sqlite"
 # Mac App Store command-line interface
 brew "mas"
 # Java-based project management
 brew "maven"
+# Command-line interface for SQLite
+brew "sqlite"
 # Port scanning utility for large networks
 brew "nmap"
 # Retrieves currently playing media, and simulates media actions
@@ -84,12 +80,8 @@ brew "nvm"
 brew "protobuf"
 # Generate clients, server & docs from an OpenAPI spec (v2, v3)
 brew "openapi-generator"
-# Framework for layout and rendering of i18n text
-brew "pango"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
-# PDF rendering library (based on the xpdf-3.0 code base)
-brew "poppler"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
 # Python interface to Tcl/Tk
@@ -98,8 +90,6 @@ brew "python-tk@3.10"
 brew "pytorch"
 # Install various Ruby versions and implementations
 brew "ruby-build"
-# Safe, concurrent, practical language
-brew "rust"
 # Tool to enforce Swift style and conventions
 brew "swiftlint"
 # Internet file retriever
@@ -110,8 +100,6 @@ brew "xcbeautify"
 brew "xcode-kotlin"
 # JavaScript package manager
 brew "yarn"
-# General-purpose lossless data-compression library
-brew "zlib"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Bash script that can be used to install AAB files into connected Android devices
