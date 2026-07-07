@@ -18,10 +18,6 @@ brew "automake"
 brew "bundletool"
 # Cross-platform make
 brew "cmake"
-# YAML Parser
-brew "libyaml"
-# Dependency manager for Cocoa projects
-brew "cocoapods"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
 # GNU File, Shell, and Text utilities
@@ -64,6 +60,8 @@ brew "kdoctor"
 brew "kotlin"
 # Anti-bikeshedding Kotlin linter with built-in formatter
 brew "ktlint"
+# YAML Parser
+brew "libyaml"
 # Mac App Store command-line interface
 brew "mas"
 # Java-based project management
