@@ -90,6 +90,8 @@ brew "pytorch"
 brew "ruby-build"
 # Tool to enforce Swift style and conventions
 brew "swiftlint"
+# Swift toolchain installer and manager
+brew "swiftly"
 # Internet file retriever
 brew "wget"
 # Little beautifier tool for xcodebuild
@@ -122,6 +124,8 @@ cask "firefox"
 cask "git-credential-manager"
 # Tools to protect your files
 cask "gpg-suite-no-mail"
+# Smart card libraries and utilities
+cask "opensc-app"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
 # JDK from the Eclipse Foundation (Adoptium)
@@ -130,8 +134,6 @@ cask "temurin@11"
 cask "temurin@17"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin@21"
-# Video communication and virtual meeting platform
-cask "zoom"
 mas "AdGuard Mini", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "Apple Configurator", id: 1037126344
@@ -140,6 +142,8 @@ mas "Developer", id: 640199958
 mas "Indigo", id: 6763755310
 mas "Ivory", id: 6444602274
 mas "Keynote", id: 361285480
+mas "McDNIe", id: 6741481474
+mas "Microsoft PowerPoint", id: 462062816
 mas "Numbers", id: 361304891
 mas "OneDrive", id: 823766827
 mas "Pages", id: 361309726
