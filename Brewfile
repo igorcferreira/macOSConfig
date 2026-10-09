@@ -1,6 +1,7 @@
 tap "heroku/brew", trusted: true
 tap "igorcferreira/tap", trusted: true
 tap "lokalise/cli-2", trusted: true
+tap "omlahore/tap"
 tap "teamookla/speedtest", trusted: true
 # Development kit for the Java programming language
 brew "openjdk"
@@ -106,6 +107,8 @@ brew "zsh"
 brew "igorcferreira/tap/install-aab"
 # Lokalise CLI v2
 brew "lokalise/cli-2/lokalise2"
+# Debloat macOS: turn off Apple Intelligence, analytics, ads and pop-ups
+brew "omlahore/tap/removemacai", trusted: true
 # Ookla Speedtest
 brew "teamookla/speedtest/speedtest"
 # Menu bar tool to limit maximum charging percentage
@@ -137,23 +140,19 @@ cask "temurin@21"
 mas "AdGuard Mini", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "Apple Configurator", id: 1037126344
-mas "Croissant", id: 6670288979
 mas "Developer", id: 640199958
 mas "Indigo", id: 6763755310
 mas "Ivory", id: 6444602274
 mas "Keynote", id: 361285480
-mas "McDNIe", id: 6741481474
 mas "Microsoft PowerPoint", id: 462062816
 mas "Numbers", id: 361304891
 mas "OneDrive", id: 823766827
 mas "Pages", id: 361309726
 mas "PostPortuguese", id: 0
 mas "Slack", id: 803453959
-mas "Snapsmith", id: 6760035733
 mas "Swift Playground", id: 1496833156
 mas "Telegram", id: 747648890
 mas "TestFlight", id: 899247664
-mas "Wallaroo", id: 1630565980
 mas "Xcode", id: 497799835
 go "github.com/go-delve/delve/cmd/dlv"
 go "golang.org/x/mobile/cmd/gobind"
