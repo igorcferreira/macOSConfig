@@ -67,10 +67,6 @@ brew "libyaml"
 brew "mas"
 # Java-based project management
 brew "maven"
-# Command-line interface for SQLite
-brew "sqlite"
-# Port scanning utility for large networks
-brew "nmap"
 # Retrieves currently playing media, and simulates media actions
 brew "nowplaying-cli"
 # Manage multiple Node.js versions
@@ -81,10 +77,14 @@ brew "protobuf"
 brew "openapi-generator"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Command-line interface for SQLite
+brew "sqlite"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
+brew "python@3.15"
+# Python interface to gdbm
+brew "python-gdbm@3.15"
 # Python interface to Tcl/Tk
-brew "python-tk@3.10"
+brew "python-tk@3.15"
 # Tensors and dynamic neural networks
 brew "pytorch"
 # Install various Ruby versions and implementations
