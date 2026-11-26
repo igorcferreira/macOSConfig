@@ -73,8 +73,6 @@ brew "nowplaying-cli"
 brew "nvm"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
-# Generate clients, server & docs from an OpenAPI spec (v2, v3)
-brew "openapi-generator"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Command-line interface for SQLite
